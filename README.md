@@ -1,20 +1,66 @@
-# Smart Library Management System (OOP + JSON)
+Smart Library Management System
+Student Information
 
-A small, realistic **console-based** library management application built in **Python** using **Object-Oriented Programming**.
+Name: Joyti Prokash Dash Talukdar
 
-## Features
-- Book hierarchy with **abstraction + inheritance** (`Book`, `PhysicalBook`, `EBook`)
-- Members can borrow/return books (association)
-- Loans created on successful borrow (composition)
-- Library controller (aggregation, separation of concerns)
-- Custom exceptions + friendly error messages
-- Save/load state using **JSON** (`data.json`)
-- Docstrings across classes and public methods
-- Optional tests with `pytest`
+Student ID: 2330769
 
-## Project Structure
-```
-smart-library/
+Course: Object-Oriented Programming (Python)
+
+Instructor: Andrey Krutauz
+
+Project Type: Individual Final Project
+
+Project Description
+
+This project is a Smart Library Management System developed in Python using Object-Oriented Programming (OOP) principles.
+
+The system is designed for a small public library and allows users to:
+
+Add books (Physical Books and EBooks)
+
+Register members
+
+Borrow and return books
+
+Track loans
+
+Save and load library data using JSON
+
+Interact with the system using a console-based menu
+
+The main objective of this project is to demonstrate a clear understanding of core OOP concepts, proper object modeling, and basic data persistence.
+
+OOP Concepts Demonstrated
+
+The project demonstrates the following concepts covered in class:
+
+Encapsulation (private attributes and properties)
+
+Inheritance
+
+Abstraction using an Abstract Base Class
+
+Polymorphism
+
+Composition (Loan class)
+
+Association (Member and Book relationship)
+
+Aggregation (Library as a system controller)
+
+Magic methods (__str__, __eq__)
+
+Custom exceptions
+
+File input/output using JSON
+
+Documentation using docstrings
+
+Optional automated testing using pytest
+
+Project Structure
+SmartLibrary-2330769/
 ├── library/
 │   ├── __init__.py
 │   ├── book.py
@@ -28,45 +74,74 @@ smart-library/
 ├── README.md
 ├── data.json
 └── .gitignore
-```
 
-## How to Run
-From the project root:
-```bash
+How to Run the Application
+Step 1: Open terminal in the project folder (Windows example)
+cd /d C:\Users\HP\Downloads\SmartLibrary-2330769
+
+Step 2: Run the program
 python main.py
-```
 
-## Example Usage
-- Add a book (physical or ebook)
-- Add a member
-- Borrow and return books
-- Save the library to `data.json`
-- Load it back later
 
-## Saving & Loading
-In the menu:
-- **Save library** writes to `data.json`
-- **Load library** reads from `data.json`
+A menu will appear that allows interaction with the library system.
 
-You can also use the API directly:
-```python
-from library.library import Library
-lib = Library()
-lib.save_to_file("data.json")
-lib.load_from_file("data.json")
-```
+Console Menu Features
 
-## Run Tests (Optional Bonus)
-Install pytest (if not installed):
-```bash
+Add physical book
+
+Add ebook
+
+Add member
+
+Borrow book
+
+Return book
+
+List books
+
+List members
+
+List loans
+
+Save library data
+
+Load library data
+
+Exit program
+
+The console menu does not contain business logic. All application logic is handled by the Library class.
+
+Saving and Loading Data
+
+Library data is saved in JSON format
+
+File name: data.json
+
+Data persists between program runs
+
+Example:
+
+library.save_to_file("data.json")
+library.load_from_file("data.json")
+
+Automated Testing (Optional Bonus)
+Install pytest
 pip install pytest
-```
 
-Run:
-```bash
+Run tests
 pytest -q
-```
 
-## Notes
-- For simplicity, this implementation treats an **EBook** as borrowable by **one member at a time**.
-  If your teacher allows, you can change that rule (e.g., unlimited ebook borrows).
+
+Tests verify core functionality such as borrowing, returning, error handling, and JSON persistence.
+
+Notes
+
+EBooks are designed to be borrowed by one member at a time for simplicity.
+
+Custom exceptions are used for clear error handling.
+
+The project prioritizes readability and correctness over advanced Python features.
+
+Submission
+
+This project is submitted as an individual GitHub repository in accordance with the course requirements.
